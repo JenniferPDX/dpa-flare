@@ -16,7 +16,9 @@
 }
 
 .node text {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Arial", Helvetica, sans-serif;
 }
 
 path.link {
@@ -33,17 +35,17 @@ form {
     </style>
   </head>
   <body>
+<!--     <form>
+          <label><input type="radio" name="mode" value="Teaching" checked> Teaching<br></label>
+          <label><input type="radio" name="mode" value="Advising"> Advising<br></label>
+          <label><input type="radio" name="mode" value="Research"> Research<br></label>
+          <label><input type="radio" name="mode" value="Partners"> Partners<br></label>
+          <label><input type="radio" name="mode" value="Committees"> Committees<br></label>
+          <label><input type="radio" name="mode" value="Administers"> Administers</label>
+    </form> -->
     <div id="body">
       <div id="footer">
         <div class="hint">Click or option-click to expand or collapse a node</div>
-        <form>
-              <label><input type="radio" name="mode" value="Teaching" checked> Teaching<br></label>
-              <label><input type="radio" name="mode" value="Advising"> Advising<br></label>
-              <label><input type="radio" name="mode" value="Research"> Research<br></label>
-              <label><input type="radio" name="mode" value="Partners"> Partners<br></label>
-              <label><input type="radio" name="mode" value="Committees"> Committees<br></label>
-              <label><input type="radio" name="mode" value="Administers"> Administers</label>
-        </form>
       </div>
     </div>
     <script type="text/javascript">
@@ -53,7 +55,7 @@ var m = [20, 120, 20, 120],
     h = 800 - m[0] - m[2],
     i = 0,
     root,
-    nodeToKeep = "TEACHING";
+    nodeToShow = 0; // Default category which is expanded for everyone (0-5)
 
 var tree = d3.layout.tree()
     .size([h, w]);
@@ -67,12 +69,14 @@ var vis = d3.select("#body").append("svg:svg")
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
+  var categories = [ "Teaching", "Advising", "Research", "Partners", "Committees", "Administers" ];
+    
 //d3.json("wheel-faculty-NP.json", function(json) {
 d3.json("flare.json", function(json) {
   root = json;
   root.x0 = h / 2;
   root.y0 = 0;
-
+  
   function toggleAll(d) {
     if (d.children) {
       d.children.forEach(toggleAll);
@@ -80,54 +84,16 @@ d3.json("flare.json", function(json) {
     }
   }
 
-  function toggleAllTeaching(d) {
-    if (d.children) {
-      d.children.forEach(toggleAllTeaching);
-      toggleTeaching(d);
-    }
-  }
-  
-  // This works, but you then need to toggle the root.children[x] level
-  function toggleAllButTeaching(d) {
-    if (d.children) {
-      d.children.forEach(toggleAllButTeaching);
-      toggleNonTeaching(d);
-    }
-  }
-
-  function toggleAllNonX(d, nodeToKeep) {
-    if (d.children) {
-      d.children.forEach(toggleAllNonX(nodeToKeep));
-      toggleNonX(d, nodeToKeep);
-    }
-  }
-
-function showAll(d) {
-    if (d._children) {
-      d._children.forEach(showAll);
-      show(d);
-    }
-  }
-
-function showAll(d) {
-    if (d._children) {
-      d._children.forEach(showAll);
-      show(d);
-    }
-  }
-  
-  // Initialize the display to show a few nodes.
-  // This fails if the specified node doesn't exist.
   root.children.forEach(toggleAll);
-  //root.children.forEach(toggleAllNonX(d, "TEACHING"));
-  //root.children.forEach(toggleAllButTeaching);
   
+  // Initialize the display to show the Teaching category for everyone
   for (i=0; i < root.children.length; i++) {
     toggle(root.children[i]);
-    toggle(root.children[i].children[5]);
+    toggle(root.children[i].children[nodeToShow]);
   }
 
   update(root);
+
 });
 
 function update(source) {
@@ -136,8 +102,9 @@ function update(source) {
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse();
 
+  // Horizontal spacing of nodes
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 180; });
+  nodes.forEach(function(d) { d.y = d.depth * 280; });
 
   // Update the nodes…
   var node = vis.selectAll("g.node")
@@ -147,7 +114,24 @@ function update(source) {
   var nodeEnter = node.enter().append("svg:g")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-      .on("click", function(d) { toggle(d); update(d); });
+      .on("click", function(d) {
+            if (d.depth == 0) {
+                console.info("Clicked on root");
+                for (index=0; index < root.children.length; index++) {
+                    console.info("Hiding previous selection");
+                    toggle(root.children[index].children[nodeToShow]);
+                  }
+                nodeToShow < (categories.length -1) ? nodeToShow += 1: nodeToShow = 0;
+                for (index=0; index < root.children.length; index++) {
+                    console.info("Showing next selection");
+                    toggle(root.children[index].children[nodeToShow]);
+                  }
+            }
+            else {
+                toggle(d); 
+            }
+            update(d); 
+      });
 
   nodeEnter.append("svg:circle")
       .attr("r", 1e-6)
@@ -218,6 +202,35 @@ function update(source) {
     d.x0 = d.x;
     d.y0 = d.y;
   });
+  
+  // This doesn't yet work. 
+  d3.selectAll("input").on("change", function change() {
+
+    console.info( "Selection: %s", this.value);
+
+    // Which category are we supposed to display?
+    var index = categories.indexOf(this.value); 
+    console.info( "index: %d", index);
+    console.info( "root.children.length: %d", root.children.length);
+    
+    // Get everyone visible again
+      for (i=0; i < root.children.length; i++) {
+        console.info("index for loop: %", i);
+        show( root.children[i] );
+        for (j=0; j < root.children[i].children.length; j++) {
+            show( root.children[i].children[j]);
+            }
+      }
+    
+    // Hide nodes under the other categories
+    for (i=0; i < root.children.length; i++) {
+        //console.info("Inside for loop. Index = %d, i = %d", index, i);
+        //toggle(root.children[i]);
+        //toggle(root.children[i].children[index]);
+    }
+    
+    update( root );
+  });
 }
 
 // Toggle children.
@@ -231,50 +244,13 @@ function toggle(d) {
   }
 }
 
-// Toggle children.
-function toggleTeaching(d) {
-  if (d.children) {
-    if (d.name == "TEACHING") {
-        d._children = d.children;
-        d.children = null;
-    }
-  } else {
-    if (d.name == "TEACHING") {
-        d.children = d._children;
-        d._children = null;
-    }
-  }
-}
 
-// Toggle children.
-function toggleNonTeaching(d) {
-  if (d.children) {
-    if (d.name != "TEACHING") {
-        d._children = d.children;
-        d.children = null;
-    }
-  } else {
-    if (d.name != "TEACHING") {
-        d.children = d._children;
-        d._children = null;
+function showAll(d) {
+    if (d._children) {
+      d._children.forEach(showAll);
+      show(d);
     }
   }
-}
-
-// Toggle children.
-function toggleNonX(d) {
-  if (d.children) {
-    if (d.name != nodeToKeep ) {
-        d._children = d.children;
-        d.children = null;
-    }
-  } else {
-    if (d.name != nodeToKeep) {
-        d.children = d._children;
-        d._children = null;
-    }
-  }
-}
 
 // Show hidden children
 function show(d) {
