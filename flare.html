@@ -45,7 +45,8 @@ form {
     </form> -->
     <div id="body">
       <div id="footer">
-        <div class="hint">Click or option-click to expand or collapse a node</div>
+        <div class="hint">Click or option-click to expand or collapse a node<br>
+        Click on the root to cycle through each category in turn</div>
       </div>
     </div>
     <script type="text/javascript">
@@ -55,7 +56,7 @@ var m = [20, 120, 20, 120],
     h = 800 - m[0] - m[2],
     i = 0,
     root,
-    nodeToShow = 0; // Default category which is expanded for everyone (0-5)
+    categoryToShow = 0; // Default category which is expanded for everyone (0-5)
 
 var tree = d3.layout.tree()
     .size([h, w]);
@@ -84,15 +85,10 @@ d3.json("flare.json", function(json) {
     }
   }
 
-  root.children.forEach(toggleAll);
-  
-  // Initialize the display to show the Teaching category for everyone
-  for (i=0; i < root.children.length; i++) {
-    toggle(root.children[i]);
-    toggle(root.children[i].children[nodeToShow]);
-  }
+    // Initialize the display to show just the Teaching category for everyone
+    showOneCategory( root, categoryToShow );
 
-  update(root);
+    update(root);
 
 });
 
@@ -116,16 +112,9 @@ function update(source) {
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
       .on("click", function(d) {
             if (d.depth == 0) {
-                console.info("Clicked on root");
-                for (index=0; index < root.children.length; index++) {
-                    console.info("Hiding previous selection");
-                    toggle(root.children[index].children[nodeToShow]);
-                  }
-                nodeToShow < (categories.length -1) ? nodeToShow += 1: nodeToShow = 0;
-                for (index=0; index < root.children.length; index++) {
-                    console.info("Showing next selection");
-                    toggle(root.children[index].children[nodeToShow]);
-                  }
+                // Show the next category
+                categoryToShow < (categories.length -1) ? categoryToShow += 1: categoryToShow = 0;
+                showOneCategory( source, categoryToShow );
             }
             else {
                 toggle(d); 
@@ -251,6 +240,7 @@ function showAll(d) {
       show(d);
     }
   }
+  
 
 // Show hidden children
 function show(d) {
@@ -259,6 +249,36 @@ function show(d) {
         d._children = null;
     }
 }
+
+  
+// Hide showing children
+function hide(d) {
+    if (d.children) {
+        d._children = d.children;
+        d.children = null;
+    }
+}
+
+
+// Hide all children
+function hideAll(d) {
+    if (d.children) {
+        d.children.forEach(hideAll);
+        hide(d);
+    }
+}
+
+  
+function showOneCategory( source, category ) {
+    // Hide all children as the starting point
+    source.children.forEach( hideAll );
+
+    for (index =0; index < source.children.length; index++) {
+        show( source.children[ index ]);
+        show( source.children[ index ].children[ category ]);
+    }
+}
+  
     </script>
   </body>
 </html>
