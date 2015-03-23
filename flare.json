@@ -8,121 +8,53 @@
           "colour": "#36483b",
           "name": "TEACHING",
           "children": [
-            {
-              "colour": "#36483b",
-              "name": "NON PROFIT MANAGEMENT CERT",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAP (Teach/exams/theses)",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 509: ORGANIZTL EXPERIENCE",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 603: DISSERTATION",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 509: PRAC: ORGANIZTL EXPERIENCE",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 544: LDRSHP, GOVERNCE HLTH SVCS",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 574: HEALTH SYSTEMS ORG",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 578: CONT IMPRV-HLTH CARE",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 588: PROG EVAL/MGMT HLTH",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 603: DISSERTATION",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAP 603: DISSERTATION",
-              "size": 5
-            }
+            { "colour": "#36483b", "name": "NON PROFIT MANAGEMENT CERT", "size": 5 },
+            { "colour": "#36483b", "name": "PAP (Teach/exams/theses)", "size": 5 },
+            { "colour": "#36483b", "name": "PA 509: ORGANIZTL EXPERIENCE", "size": 5 },
+            { "colour": "#36483b", "name": "PA 603: DISSERTATION", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 509: PRAC: ORGANIZTL EXPERIENCE", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 544: LDRSHP, GOVERNCE HLTH SVCS", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 574: HEALTH SYSTEMS ORG", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 578: CONT IMPRV-HLTH CARE", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 588: PROG EVAL/MGMT HLTH", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 603: DISSERTATION", "size": 5 },
+            { "colour": "#36483b", "name": "PAP 603: DISSERTATION", "size": 5 }
           ]
         },
         {
           "colour": "#667A66",
           "name": "STUDENT ADVISING",
           "children": [
-            {
-              "colour": "#667A66",
-              "name": "MPA",
-              "size": 5
-            },
-            {
-              "colour": "#667A66",
-              "name": "PAP, STUDENT COMS",
-              "size": 5
-            }
+            { "colour": "#667A66", "name": "MPA", "size": 5 },
+            { "colour": "#667A66", "name": "PAP, STUDENT COMS", "size": 5 }
           ]
         },
         {
           "colour": "#C0CCC0",
           "name": "RESEARCH/SCHOL.",
           "children": [
-            {
-              "colour": "#C0CCC0",
-              "name": "PLACEHOLDER",
-              "size": 5
-            }
+            { "colour": "#C0CCC0", "name": "PLACEHOLDER", "size": 5 }
           ]
         },
         {
           "colour": "#ae4a1c",
           "name": "PARTNERS",
           "children": [
-            {
-              "colour": "#ae4a1c",
-              "name": "PLACEHOLDER",
-              "size": 5
-            }
+            { "colour": "#ae4a1c", "name": "PLACEHOLDER", "size": 5 }
           ]
         },
         {
           "colour": "#fd8d3c",
           "name": "COMS &TASK FORCES",
           "children": [
-            {
-              "colour": "#fd8d3c",
-              "name": "P & T COMS",
-              "size": 5
-            }
+            { "colour": "#fd8d3c", "name": "P & T COMS", "size": 5 }
           ]
         },
         {
           "colour": "#fdbe85",
           "name": "ADMINISTERS",
           "children": [
-            {
-              "colour": "#fdbe85",
-              "name": "PLACEHOLDER",
-              "size": 5
-            }
+            { "colour": "#fdbe85", "name": "PLACEHOLDER", "size": 5 }
           ]
         }
       ]
@@ -134,191 +66,67 @@
           "colour": "#36483b",
           "name": "TEACHING",
           "children": [
-            {
-              "colour": "#36483b",
-              "name": "PAP (Teach/exams/theses)",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 510: CULTURE, VALUES & LDRSHP",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 511: PUBLIC ADMINISTRATN",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 540: ADMIN THEORY-BEHAV",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 540: ADMINISTRATIVE THEORY-BEHAV",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 545: ORGANIZTN DEVELOPMNT",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 554: POLICY ANALYSIS RES",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PA 610: CULTURE AND HEALTH CARE",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 510: CULTURE AND HEALTH CARE",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 570: HEALTH ADMINISTRATION",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 571: HEALTH POLICY",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 572: HEALTH POLITICS",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAP 654: POLICY ANALYSIS RES",
-              "size": 5
-            }
+            { "colour": "#36483b", "name": "PAP (Teach/exams/theses)", "size": 5 },
+            { "colour": "#36483b", "name": "PA 510: CULTURE, VALUES & LDRSHP", "size": 5 },
+            { "colour": "#36483b", "name": "PA 511: PUBLIC ADMINISTRATN", "size": 5 },
+            { "colour": "#36483b", "name": "PA 540: ADMIN THEORY-BEHAV", "size": 5 },
+            { "colour": "#36483b", "name": "PA 540: ADMINISTRATIVE THEORY-BEHAV", "size": 5 },
+            { "colour": "#36483b", "name": "PA 545: ORGANIZTN DEVELOPMNT", "size": 5 },
+            { "colour": "#36483b", "name": "PA 554: POLICY ANALYSIS RES", "size": 5 },
+            { "colour": "#36483b", "name": "PA 610: CULTURE AND HEALTH CARE", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 510: CULTURE AND HEALTH CARE", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 570: HEALTH ADMINISTRATION", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 571: HEALTH POLICY", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 572: HEALTH POLITICS", "size": 5 },
+            { "colour": "#36483b", "name": "PAP 654: POLICY ANALYSIS RES", "size": 5 }
           ]
         },
         {
           "colour": "#667A66",
           "name": "STUDENT ADVISING",
           "children": [
-            {
-              "colour": "#667A66",
-              "name": "MPA",
-              "size": 5
-            },
-            {
-              "colour": "#667A66",
-              "name": "PAP",
-              "size": 5
-            }
+            { "colour": "#667A66", "name": "MPA", "size": 5 },
+            { "colour": "#667A66", "name": "PAP", "size": 5 }
           ]
         },
         {
           "colour": "#C0CCC0",
           "name": "RESEARCH/SCHOL.",
           "children": [
-            {
-              "colour": "#C0CCC0",
-              "name": "POVERTY & PROSPERITY",
-              "size": 5
-            },
-            {
-              "colour": "#C0CCC0",
-              "name": "OM AND ND IN MEDICINE",
-              "size": 5
-            }
+            { "colour": "#C0CCC0", "name": "POVERTY & PROSPERITY", "size": 5 },
+            { "colour": "#C0CCC0", "name": "OM AND ND IN MEDICINE", "size": 5 }
           ]
         },
         {
           "colour": "#ae4a1c",
           "name": "PARTNERS",
           "children": [
-            {
-              "colour": "#ae4a1c",
-              "name": "OREGON TRIBES",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "NICWA",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "NWPAIHB",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "OTHER NATIVE GROUPS",
-              "size": 5
-            }
+            { "colour": "#ae4a1c", "name": "OREGON TRIBES", "size": 5 },
+            { "colour": "#ae4a1c", "name": "NICWA", "size": 5 },
+            { "colour": "#ae4a1c", "name": "NWPAIHB", "size": 5 },
+            { "colour": "#ae4a1c", "name": "OTHER NATIVE GROUPS", "size": 5 }
           ]
         },
         {
           "colour": "#fd8d3c",
           "name": "COMS &TASK FORCES",
           "children": [
-            {
-              "colour": "#fd8d3c",
-              "name": "MPP COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "MPA/HEALTH COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "P & T COMS, CHAIR",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "HATFIELD BY-LAWS COMMITTEE",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "DIVERSITY COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "CREDIT FOR PRIOR LEARNING COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "SCHOLARSHIP (COM?)",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "NATIVE CENTER (COM?)",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "FAC GRIEVANCE COM",
-              "size": 5
-            }
+            { "colour": "#fd8d3c", "name": "MPP COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "MPA/HEALTH COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "P & T COMS, CHAIR", "size": 5 },
+            { "colour": "#fd8d3c", "name": "HATFIELD BY-LAWS COMMITTEE", "size": 5 },
+            { "colour": "#fd8d3c", "name": "DIVERSITY COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "CREDIT FOR PRIOR LEARNING COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "SCHOLARSHIP (COM?)", "size": 5 },
+            { "colour": "#fd8d3c", "name": "NATIVE CENTER (COM?)", "size": 5 },
+            { "colour": "#fd8d3c", "name": "FAC GRIEVANCE COM", "size": 5 }
           ]
         },
         {
           "colour": "#fdbe85",
           "name": "ADMINISTERS",
           "children": [
-            {
-              "colour": "#fdbe85",
-              "name": "TRIBAL GOV, COM DEV CERT, LEAD",
-              "size": 5
-            }
+            { "colour": "#fdbe85", "name": "TRIBAL GOV, COM DEV CERT, LEAD", "size": 5 }
           ]
         }
       ]
@@ -330,226 +138,74 @@
           "colour": "#36483b",
           "name": "TEACHING",
           "children": [
-            {
-              "colour": "#36483b",
-              "name": "PAH 509: ORGANIZATIONAL EXPERIENCE",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 541: ORG BEHAVIOR HLTH",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 542: MARKETING HEALTH SERVICES",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 571: HEALTH POLICY",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 574: HEALTH SYSTEMS ORG",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 576: STRAT MGMT HLTHCARE ORGS",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAH 674: HEALTH SYSTEMS ORG",
-              "size": 5
-            },
-            {
-              "colour": "#36483b",
-              "name": "PAP 616: POLICY PROCESS",
-              "size": 5
-            }
+            { "colour": "#36483b", "name": "PAH 509: ORGANIZATIONAL EXPERIENCE", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 541: ORG BEHAVIOR HLTH", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 542: MARKETING HEALTH SERVICES", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 571: HEALTH POLICY", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 574: HEALTH SYSTEMS ORG", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 576: STRAT MGMT HLTHCARE ORGS", "size": 5 },
+            { "colour": "#36483b", "name": "PAH 674: HEALTH SYSTEMS ORG", "size": 5 },
+            { "colour": "#36483b", "name": "PAP 616: POLICY PROCESS", "size": 5 }
           ]
         },
         {
           "colour": "#667A66",
           "name": "STUDENT ADVISING",
           "children": [
-            {
-              "colour": "#667A66",
-              "name": "MPA:HA and MPH-HMP",
-              "size": 5
-            },
-            {
-              "colour": "#667A66",
-              "name": "PAP",
-              "size": 5
-            }
+            { "colour": "#667A66", "name": "MPA:HA and MPH-HMP", "size": 5 },
+            { "colour": "#667A66", "name": "PAP", "size": 5 }
           ]
         },
         {
           "colour": "#C0CCC0",
           "name": "RESEARCH/SCHOL.",
           "children": [
-            {
-              "colour": "#C0CCC0",
-              "name": "COORDINATED CARE ORG STUDIES",
-              "size": 5
-            },
-            {
-              "colour": "#C0CCC0",
-              "name": "EVAL OF HLTH ENGAGEMENT MODEL",
-              "size": 5
-            },
-            {
-              "colour": "#C0CCC0",
-              "name": "FEDERALISM,  AFFORDABLE CARE ACT",
-              "size": 5
-            },
-            {
-              "colour": "#C0CCC0",
-              "name": "OPINIONS, SUPPORT, HLTH SYS REFORM",
-              "size": 5
-            },
-            {
-              "colour": "#C0CCC0",
-              "name": "PATIENT-CENTERED PRIM CARE HOME",
-              "size": 5
-            }
+            { "colour": "#C0CCC0", "name": "COORDINATED CARE ORG STUDIES", "size": 5 },
+            { "colour": "#C0CCC0", "name": "EVAL OF HLTH ENGAGEMENT MODEL", "size": 5 },
+            { "colour": "#C0CCC0", "name": "FEDERALISM,  AFFORDABLE CARE ACT", "size": 5 },
+            { "colour": "#C0CCC0", "name": "OPINIONS, SUPPORT, HLTH SYS REFORM", "size": 5 },
+            { "colour": "#C0CCC0", "name": "PATIENT-CENTERED PRIM CARE HOME", "size": 5 }
           ]
         },
         {
           "colour": "#ae4a1c",
           "name": "PARTNERS",
           "children": [
-            {
-              "colour": "#ae4a1c",
-              "name": "FELS INST OF GOVT, UPENN",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "OHA",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "OR PATIENT SAFETY COM, VC, GOV APPT",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "PEBB",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "PROVIDENCE CTR, OUTCOMES RES& ED",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "R W JOHNSON FOUNDATION",
-              "size": 5
-            },
-            {
-              "colour": "#ae4a1c",
-              "name": "ROCKEFELLER INST OF GOVT, NYU",
-              "size": 5
-            }
+            { "colour": "#ae4a1c", "name": "FELS INST OF GOVT, UPENN", "size": 5 },
+            { "colour": "#ae4a1c", "name": "OHA", "size": 5 },
+            { "colour": "#ae4a1c", "name": "OR PATIENT SAFETY COM, VC, GOV APPT", "size": 5 },
+            { "colour": "#ae4a1c", "name": "PEBB", "size": 5 },
+            { "colour": "#ae4a1c", "name": "PROVIDENCE CTR, OUTCOMES RES& ED", "size": 5 },
+            { "colour": "#ae4a1c", "name": "R W JOHNSON FOUNDATION", "size": 5 },
+            { "colour": "#ae4a1c", "name": "ROCKEFELLER INST OF GOVT, NYU", "size": 5 }
           ]
         },
         {
           "colour": "#fd8d3c",
           "name": "COMS &TASK FORCES",
           "children": [
-            {
-              "colour": "#fd8d3c",
-              "name": "ACADEMY HEALTH, ABSTR REVIEW COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "ABSTRACT REVIEW FOR AMER PH ASSOC",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "ACCRED LEAD CAHME",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "ADMISSIONS, CHAIR",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "ADVSIORY",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "AS BUDGET COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "COM TO CREATE SCH OF PH",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "DEAN'S STRATEGIC ENROLL MGT COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "FACULTY SENATE BUDGET COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "HEALTH SYSTEM POLICY SEARCH",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "MPA/ HEALTH COM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "OR REPRODUCTIVE HLTH, ADVIS BRD MEM",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "RES ADVISORY FOR VP RES/STRAT PARTN",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "STRAT ENROLL MGT",
-              "size": 5
-            },
-            {
-              "colour": "#fd8d3c",
-              "name": "UPSILON PHI DELTA HLTH MGT HON SOC",
-              "size": 5
-            }
+            { "colour": "#fd8d3c", "name": "ACADEMY HEALTH, ABSTR REVIEW COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "ABSTRACT REVIEW FOR AMER PH ASSOC", "size": 5 },
+            { "colour": "#fd8d3c", "name": "ACCRED LEAD CAHME", "size": 5 },
+            { "colour": "#fd8d3c", "name": "ADMISSIONS, CHAIR", "size": 5 },
+            { "colour": "#fd8d3c", "name": "ADVSIORY", "size": 5 },
+            { "colour": "#fd8d3c", "name": "AS BUDGET COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "COM TO CREATE SCH OF PH", "size": 5 },
+            { "colour": "#fd8d3c", "name": "DEAN'S STRATEGIC ENROLL MGT COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "FACULTY SENATE BUDGET COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "HEALTH SYSTEM POLICY SEARCH", "size": 5 },
+            { "colour": "#fd8d3c", "name": "MPA/ HEALTH COM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "OR REPRODUCTIVE HLTH, ADVIS BRD MEM", "size": 5 },
+            { "colour": "#fd8d3c", "name": "RES ADVISORY FOR VP RES/STRAT PARTN", "size": 5 },
+            { "colour": "#fd8d3c", "name": "STRAT ENROLL MGT", "size": 5 },
+            { "colour": "#fd8d3c", "name": "UPSILON PHI DELTA HLTH MGT HON SOC", "size": 5 }
           ]
         },
         {
           "colour": "#fdbe85",
           "name": "ADMINISTERS",
           "children": [
-            {
-              "colour": "#fdbe85",
-              "name": "PLACEHOLDER",
-              "size": 5
-            }
+            { "colour": "#fdbe85", "name": "PLACEHOLDER", "size": 5 }
           ]
         }
       ]
