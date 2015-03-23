@@ -2,9 +2,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script type="text/javascript" src="d3/d3.layout.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
     <style type="text/css">
 
         .node circle {
@@ -45,6 +44,9 @@
     
   </head>
   <body>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
     <form>
           <label><input type="radio" name="mode" value="Teaching" checked> Teaching<br></label>
           <label><input type="radio" name="mode" value="Advising"> Advising<br></label>
@@ -55,7 +57,7 @@
     </form>
     <div id="body">
       <div id="footer">
-        <div id="hint">Click or option-click to expand or collapse a node</div>
+        <div id="hint">Click to expand or collapse a node</div>
       </div>
     </div>
     <script type="text/javascript">
@@ -124,17 +126,7 @@ function update(source) {
   var nodeEnter = node.enter().append("svg:g")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-      .on("click", function(d) {
-            if (d.depth == 0) {
-                // Show the next category
-                categoryToShow < (categories.length -1) ? categoryToShow += 1: categoryToShow = 0;
-                showOneCategory( source, categoryToShow );
-            }
-            else {
-                toggle(d); 
-            }
-            update(d); 
-      });
+      .on("click", function(d) { toggle(d); update(d); });
 
   nodeEnter.append("svg:circle")
       .attr("r", 1e-6)
@@ -207,6 +199,8 @@ function update(source) {
   });
   
   // Refresh display based on radio button selection
+  // TODO: (Incorrectly) doesn't refresh if the root is collapsed
+  // TODO: Doesn't correctly handle cases where a faculty node (level 1) is collapsed
   d3.selectAll("input").on("change", function () {
 
     // Which category are we supposed to display?
