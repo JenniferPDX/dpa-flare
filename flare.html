@@ -7,32 +7,42 @@
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <style type="text/css">
 
+        .node circle {
+          cursor: pointer;
+          fill: #fff;
+          stroke: darkslategray;
+          stroke-width: 1.5px;
+        }
 
-.node circle {
-  cursor: pointer;
-  fill: #fff;
-  stroke: darkslategray;
-  stroke-width: 1.5px;
-}
+        .node text {
+          font-size: 14px;
+          font-weight: bold;
+          font-family: "Arial", Helvetica, sans-serif;
+        }
 
-.node text {
-  font-size: 14px;
-  font-weight: bold;
-  font-family: "Arial", Helvetica, sans-serif;
-}
+        path.link {
+          fill: none;
+          stroke: #ccc;
+          stroke-width: 1.5px;
+        }
 
-path.link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 1.5px;
-}
+        form {
+          position: absolute;
+          font-family: "Arial", Helvetica, sans-serif;
+          font-size: 12px;
+          left: 10px;
+          top: 20px;
+        }
 
-form {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
+        #hint {
+          position: absolute;
+          font-family: "Arial", Helvetica, sans-serif;
+          font-size: 12px;
+          left: 10px;
+          bottom: 40px;
+        }
     </style>
+    
   </head>
   <body>
     <form>
@@ -45,11 +55,16 @@ form {
     </form>
     <div id="body">
       <div id="footer">
-        <div class="hint">Click or option-click to expand or collapse a node</div>
+        <div id="hint">Click or option-click to expand or collapse a node</div>
       </div>
     </div>
     <script type="text/javascript">
 
+// Based on: http://mbostock.github.io/d3/talk/20111018/tree.html
+// Including this as an HTML comment at the top results in losing 
+// the stroke color on my circles... why is that? Oh, I think I put it inside the style section.
+
+    
 var m = [20, 120, 20, 120],
     w = 1280 - m[1] - m[3],
     h = 800 - m[0] - m[2],
@@ -99,7 +114,7 @@ function update(source) {
 
   // Horizontal spacing of nodes
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 280; });
+  nodes.forEach(function(d) { d.y = d.depth * 240; });
 
   // Update the nodes…
   var node = vis.selectAll("g.node")
