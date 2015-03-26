@@ -38,7 +38,7 @@
         },
         {
           "colour": "#ae4a1c",
-          "name": "PARTNERS",
+          "name": "COLLABORATIONS/PARTNERS",
           "children": [
             { "colour": "#ae4a1c", "name": "PLACEHOLDER", "size": 5 }
           ]
@@ -99,7 +99,7 @@
         },
         {
           "colour": "#ae4a1c",
-          "name": "PARTNERS",
+          "name": "COLLABORATIONS/PARTNERS",
           "children": [
             { "colour": "#ae4a1c", "name": "OREGON TRIBES", "size": 5 },
             { "colour": "#ae4a1c", "name": "NICWA", "size": 5 },
@@ -169,7 +169,7 @@
         },
         {
           "colour": "#ae4a1c",
-          "name": "PARTNERS",
+          "name": "COLLABORATIONS/PARTNERS",
           "children": [
             { "colour": "#ae4a1c", "name": "FELS INST OF GOVT, UPENN", "size": 5 },
             { "colour": "#ae4a1c", "name": "OHA", "size": 5 },
@@ -250,7 +250,7 @@
       },
       {
         "colour": "#ae4a1c",
-        "name": "PARTNERS",
+        "name": "COLLABORATIONS/PARTNERS",
         "children": [
          { "colour": "#ae4a1c", "name": "NATIONAL INSTITUTE OF HEALTH", "size": 5 },
          { "colour": "#ae4a1c", "name": "OREGON HEALTH AUTHORITY", "size": 5 },

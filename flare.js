@@ -4,7 +4,7 @@
 
 function executeFlare(fileJSONdata) {
     
-var m = [20, 120, 20, 120],
+var m = [20, 120, 20, 160], // y, x, y, x (not what I would expect)
     w = 1280 - m[1] - m[3],
     h = 800 - m[0] - m[2],
     i = 0,
@@ -52,7 +52,7 @@ function update(source) {
 
   // Horizontal spacing of nodes
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 240; });
+  nodes.forEach(function(d) { d.y = d.depth * 260; });
 
   // Update the nodes…
   var node = vis.selectAll("g.node")
