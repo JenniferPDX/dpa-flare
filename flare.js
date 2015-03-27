@@ -4,7 +4,7 @@
 
 function executeFlare(fileJSONdata) {
     
-var m = [20, 120, 20, 160], // y, x, y, x (not what I would expect)
+var m = [20, 120, 20, 180], // y, x, y, x (not what I would expect)
     w = 1280 - m[1] - m[3],
     h = 800 - m[0] - m[2],
     i = 0,
@@ -26,6 +26,7 @@ var vis = d3.select("#body").append("svg:svg")
   var categories = [ "Teaching", "Advising", "Research", "Partners", "Committees", "Administers" ];
     
 d3.json(fileJSONdata, function(json) {
+    // why was json copied over to root?
   root = json;
   root.x0 = h / 2;
   root.y0 = 0;
@@ -36,6 +37,8 @@ d3.json(fileJSONdata, function(json) {
       toggle(d);
     }
   }
+  
+    removeSplitterAll(root);
 
     // Initialize the display to show just the Teaching category for everyone
     showOneCategory( root, categoryToShow );
@@ -192,12 +195,25 @@ function hideAll(d) {
     }
 }
 
-  
+function removeSplitterAll(d){
+    if (d.children) {
+        d.children.forEach(removeSplitterAll);
+        removeSplitter(d);
+    }
+}
+
+// TODO: I should be passing the replacement character as a parameter,
+// But I'm not sure if that works with the d3.js forEach()... 
+// it doesn't seem like you can pass parameters to forEach()
+function removeSplitter(d) {
+    d.name = d.name.replace("=", "");
+}
+
 function showOneCategory( source, category ) {
     // Hide all children as the starting point
     source.children.forEach( hideAll );
 
-    for (index =0; index < source.children.length; index++) {
+    for (var index =0; index < source.children.length; index++) {
         show( source.children[ index ]);
         show( source.children[ index ].children[ category ]);
     }
