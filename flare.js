@@ -4,9 +4,9 @@
 
 function executeFlare(fileJSONdata) {
     
-var m = [20, 120, 20, 180], // y, x, y, x (not what I would expect)
+var m = [0, 120, 0, 180], // y, x, y, x (not what I would expect)
     w = 1280 - m[1] - m[3],
-    h = 800 - m[0] - m[2],
+    h = 700 - m[0] - m[2],
     i = 0,
     root,
     categoryToShow = 0; // Default category which is expanded for everyone (0-5)
